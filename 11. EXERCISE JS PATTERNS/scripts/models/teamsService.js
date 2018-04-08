@@ -55,4 +55,4 @@ let teamsService = (() => {
         joinTeam,
         leaveTeam
     }
-})()
+})();
