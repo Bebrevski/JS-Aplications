@@ -1,0 +1,23 @@
+<section id="viewMyMessages">
+    <h1>My Messages</h1>
+    <div class="messages" id="myMessages">
+        <table>
+            <thead>
+            <tr>
+                <th>From</th>
+                <th>Message</th>
+                <th>Date Received</th>
+            </tr>
+            </thead>
+            <tbody>
+            {{#if messages}}
+            {{#each messages}}
+                {{> message}}
+            {{/each}}
+            {{else}}
+                No messages available!
+            {{/if}}
+            </tbody>
+        </table>
+    </div>
+</section>
