@@ -1,6 +1,6 @@
 let remote = (() => {
-    const kinveyBaseUrl = "https://baas.kinvey.com/";
-    const kinveyAppKey = "kid_SJn2zisjG";
+    const kinveyBaseUrl = "";
+    const kinveyAppKey = "";
     const kinveyAppSecret = "f0f33ae982f7469eb2fc2932ad7aecb5";
 
     // Creates the authentication header
