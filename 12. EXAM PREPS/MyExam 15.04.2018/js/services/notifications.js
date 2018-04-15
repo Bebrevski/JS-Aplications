@@ -11,10 +11,6 @@ $(() => {
         setTimeout(() => infoBox.fadeOut(), 3000);
     };
 
-    notification.handleError = function (reason) {
-        notifications.showError(reason.responseJSON.description);
-    }
-
     notifications.showError = function (message) {
         let errorBox = $('#errorBox');
         errorBox.text(message);

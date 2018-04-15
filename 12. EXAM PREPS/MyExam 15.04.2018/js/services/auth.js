@@ -22,8 +22,6 @@ let auth = (() => {
         sessionStorage.setItem('userId', userId);
         let username = userInfo.username;
         sessionStorage.setItem('username', username);
-        //let name = userInfo.name;
-        //sessionStorage.setItem('name', name);
     }
 
     // user/login
@@ -37,7 +35,7 @@ let auth = (() => {
     }
 
     // user/register
-    function register(username, password) { //name
+    function register(username, password) {
         let userData = {
             username,
             password,
@@ -55,6 +53,10 @@ let auth = (() => {
         return remote.post('user', '_logout', 'kinvey', logoutData);
     }
 
+    function handleError(reason) {
+        notifications.showError(reason.responseJSON.description);
+    }
+
 
     return {
         login,
@@ -64,6 +66,7 @@ let auth = (() => {
         saveSession,
         getUserId,
         getUsername,
-        clearSession
+        clearSession,
+        handleError
     }
 })();

@@ -10,16 +10,30 @@ $(() => {
         this.get('index.html', handlers.home);
         this.get('#/home', handlers.home);
 
+        //HOME PAGE
+        this.get('#/homepage', handlers.homePage);
+
         //LOGIN
-        this.get('#/login', handlers.login);
         this.post('#/login', handlers.loginAction);
 
         //REGISTER
-        this.get('#/register', handlers.register);
         this.post('#/register', handlers.registerAction);
 
+        //POST ENTRY
 
+        this.post('#/post', handlers.postEntry);
 
+        //DELETE ENTRY
+        this.get('#/delete/:entryId', handlers.deleteAction);
+
+        //VIEW RECEIPTS
+        this.get('#/overview', handlers.overviewPage);
+
+        //CHECK OUT
+        this.post('#/checkout', handlers.checkOutAction);
+
+        //DETAIL VIEW
+        this.get('#/details/:receiptId', handlers.detailPage);
 
         //LOGOUT
         this.get('#/logout', function (ctx) {
